@@ -1,0 +1,36 @@
+.company-logo-container{
+    margin: 30px;
+}
+#main-container{
+    width:100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.splitter{
+    background-color: rgb(241, 241, 242);
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-top:20px;
+}
+.row{
+    margin:4px;
+}
+#table-cart{
+    table-layout: fixed;
+    width:100%;
+    text-align: center;
+}
+/* .container{
+    display: inline-block;
+} */
+.cart-header{
+    background-color: rgb(241, 241, 242);
+    text-align: center;
+}
+.company-logo{
+    padding-top:15px;
+}
+.cart-pdf{
+    padding-top:10px;
+    padding-bottom:10px;
+}

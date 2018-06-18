@@ -1,0 +1,35 @@
+{
+    "ControlFields":[{
+    "Title":"General Information","WrntyFieldName":"","CustomField":false,"ApiName":"GeneralInformation","FieldType":13,"Layout":{
+    "X":0,"Y":0,"Width":2,"Line_Number":0},"ColumnWidth":2},{
+    "Title":"Account Name","WrntyFieldName":"Account Name","CustomField":false,"ApiName":"AccountName","FieldType":1,"Layout":{
+    "X":0,"Y":1,"Width":1,"Line_Number":1},"ColumnWidth":1},{
+    "Title":"ID","WrntyFieldName":"ID","CustomField":false,"ApiName":"WrntyID","FieldType":2,"Layout":{
+    "X":1,"Y":1,"Width":1,"Line_Number":1},"ColumnWidth":1},{
+    "Title":"Account External ID","WrntyFieldName":"Account External ID","CustomField":false,"ApiName":"AccountExternalID","FieldType":1,"Layout":{
+    "X":0,"Y":2,"Width":1,"Line_Number":2},"ColumnWidth":1},{
+    "Title":"Action Time","WrntyFieldName":"Action Time","CustomField":false,"ApiName":"ActionDateTime","FieldType":6,"Layout":{
+    "X":1,"Y":2,"Width":1,"Line_Number":2},"ColumnWidth":1},{
+    "Title":"Sales Rep Name","WrntyFieldName":"Sales Rep Name","CustomField":false,"ApiName":"AgentName","FieldType":1,"Layout":{
+    "X":1,"Y":3,"Width":1,"Line_Number":3},"ColumnWidth":1},{
+    "Title":"Account Information","WrntyFieldName":"","CustomField":false,"ApiName":"AccountInformation","FieldType":13,"Layout":{
+    "X":0,"Y":4,"Width":2,"Line_Number":4},"ColumnWidth":2},{
+    "Title":"Branch","WrntyFieldName":"Branch","CustomField":false,"ApiName":"Branch","FieldType":16,"Layout":{
+    "X":1,"Y":5,"Width":1,"Line_Number":5},"ColumnWidth":1},{
+    "Title":"Bill to Name","WrntyFieldName":"Bill to Name","CustomField":false,"ApiName":"BillToName","FieldType":1,"Layout":{
+    "X":0,"Y":6,"Width":1,"Line_Number":6},"ColumnWidth":1},{
+    "Title":"Ship to Name","WrntyFieldName":"Ship to Name","CustomField":false,"ApiName":"ShipToName","FieldType":1,"Layout":{
+    "X":1,"Y":6,"Width":1,"Line_Number":6},"ColumnWidth":1},{
+    "Title":"Bill to Address","WrntyFieldName":"Bill to Address","CustomField":false,"ApiName":"BillToAddress","FieldType":14,"Layout":{
+    "X":0,"Y":7,"Width":1,"Line_Number":7},"ColumnWidth":1},{
+    "Title":"Ship to Address","WrntyFieldName":"Ship to Address","CustomField":false,"ApiName":"ShipToAddress","FieldType":14,"Layout":{
+    "X":1,"Y":7,"Width":1,"Line_Number":7},"ColumnWidth":1},{
+    "Title":"Bill to Phone","WrntyFieldName":"Bill to Phone","CustomField":false,"ApiName":"BillToPhone","FieldType":1,"Layout":{
+    "X":0,"Y":8,"Width":1,"Line_Number":8},"ColumnWidth":1},{
+    "Title":"Ship to Phone","WrntyFieldName":"Ship to Phone","CustomField":false,"ApiName":"ShipToPhone","FieldType":1,"Layout":{
+    "X":1,"Y":8,"Width":1,"Line_Number":8},"ColumnWidth":1},{
+    "Title":"Order Information","WrntyFieldName":"","CustomField":false,"ApiName":"OrderInformation","FieldType":13,"Layout":{
+    "X":0,"Y":9,"Width":2,"Line_Number":9},"ColumnWidth":2},{
+    "Title":"Order Remark","WrntyFieldName":"Order Remark","CustomField":false,"ApiName":"Remark","FieldType":3,"Layout":{
+    "X":0,"Y":10,"Width":2,"Line_Number":10},"ColumnWidth":2}]
+}

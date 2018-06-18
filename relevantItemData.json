@@ -1,0 +1,38 @@
+[
+   {
+      "ItemImageURL": "https://s3-us-west-2.amazonaws.com/pepperi-storage-production/WrntyImages/3704323/PortfolioItems/1/14818871_1_200x200.jpg",
+      "ItemExternalID": "MCR00103BLA42",
+      "ItemMainCategoryID": "NewWave",
+      "ItemName": "Dress"
+   },
+   {
+      "ItemImageURL": "https://s3-us-west-2.amazonaws.com/pepperi-storage-production/WrntyImages/3704323/PortfolioItems/9/14818849_1_200x200.jpg",
+      "ItemExternalID": "MCR00102BLA38",
+      "ItemMainCategoryID": "NewWave",
+      "ItemName": "Suit"
+   },
+   {
+      "ItemImageURL": "https://s3-us-west-2.amazonaws.com/pepperi-storage-production/WrntyImages/3704323/PortfolioItems/0/14818850_1_200x200.jpg",
+      "ItemExternalID": "MCR00102BLA40",
+      "ItemMainCategoryID": "NewWave",
+      "ItemName": "Suit"
+   },
+   {
+      "ItemImageURL": "https://s3-us-west-2.amazonaws.com/pepperi-storage-production/WrntyImages/3704323/PortfolioItems/1/14818851_1_200x200.jpg",
+      "ItemExternalID": "MCR00102BLA42",
+      "ItemMainCategoryID": "NewWave",
+      "ItemName": "Suit"
+   },
+   {
+      "ItemImageURL": "https://s3-us-west-2.amazonaws.com/pepperi-storage-production/WrntyImages/3704323/PortfolioItems/2/14818852_1_200x200.jpg",
+      "ItemExternalID": "MCR00102BLA44",
+      "ItemMainCategoryID": "NewWave",
+      "ItemName": "Suit"
+   },
+   {
+      "ItemImageURL": "https://s3-us-west-2.amazonaws.com/pepperi-storage-production/WrntyImages/3704323/PortfolioItems/3/14818853_1_200x200.jpg",
+      "ItemExternalID": "MCR00102BLA46",
+      "ItemMainCategoryID": "NewWave",
+      "ItemName": "Suit"
+   }
+]

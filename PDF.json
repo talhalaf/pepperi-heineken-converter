@@ -1,0 +1,570 @@
+{
+   "header": [
+      {
+         "Title": "General Information",
+         "WrntyFieldName": "",
+         "CustomField": false,
+         "ApiName": "GeneralInformation",
+         "FieldType": 13,
+         "ColumnWidth": 2,
+         "Layout": {
+            "X": 0,
+            "Y": 0,
+            "Width": 2,
+            "Line_Number": 0
+         },
+         "value": "splitter"
+      },
+      {
+         "Title": "Account Name",
+         "WrntyFieldName": "Account Name",
+         "CustomField": false,
+         "ApiName": "AccountName",
+         "FieldType": 1,
+         "ColumnWidth": 1,
+         "Layout": {
+            "X": 0,
+            "Y": 1,
+            "Width": 1,
+            "Line_Number": 1
+         },
+         "value": "A Las Vegas Store 1"
+      },
+      {
+         "Title": "ID",
+         "WrntyFieldName": "ID",
+         "CustomField": false,
+         "ApiName": "WrntyID",
+         "FieldType": 2,
+         "ColumnWidth": 1,
+         "Layout": {
+            "X": 1,
+            "Y": 1,
+            "Width": 1,
+            "Line_Number": 1
+         },
+         "value": 48888301
+      },
+      {
+         "Title": "Account External ID",
+         "WrntyFieldName": "Account External ID",
+         "CustomField": false,
+         "ApiName": "AccountExternalID",
+         "FieldType": 1,
+         "ColumnWidth": 1,
+         "Layout": {
+            "X": 0,
+            "Y": 2,
+            "Width": 1,
+            "Line_Number": 2
+         },
+         "value": "3962766"
+      },
+      {
+         "Title": "Action Time",
+         "WrntyFieldName": "Action Time",
+         "CustomField": false,
+         "ApiName": "ActionDateTime",
+         "FieldType": 6,
+         "ColumnWidth": 1,
+         "Layout": {
+            "X": 1,
+            "Y": 2,
+            "Width": 1,
+            "Line_Number": 2
+         },
+         "value": "2018-05-16T22:05:46Z"
+      },
+      {
+         "Title": "Sales Rep Name",
+         "WrntyFieldName": "Sales Rep Name",
+         "CustomField": false,
+         "ApiName": "AgentName",
+         "FieldType": 1,
+         "ColumnWidth": 1,
+         "Layout": {
+            "X": 1,
+            "Y": 3,
+            "Width": 1,
+            "Line_Number": 3
+         },
+         "value": "Fashion Buyer"
+      },
+      {
+         "Title": "Account Information",
+         "WrntyFieldName": "",
+         "CustomField": false,
+         "ApiName": "AccountInformation",
+         "FieldType": 13,
+         "ColumnWidth": 2,
+         "Layout": {
+            "X": 0,
+            "Y": 4,
+            "Width": 2,
+            "Line_Number": 4
+         },
+         "value": "splitter"
+      },
+      {
+         "Title": "Branch",
+         "WrntyFieldName": "Branch",
+         "CustomField": false,
+         "ApiName": "Branch",
+         "FieldType": 16,
+         "ColumnWidth": 1,
+         "Layout": {
+            "X": 1,
+            "Y": 5,
+            "Width": 1,
+            "Line_Number": 5
+         },
+         "value": "A Las Vegas Store 1"
+      },
+      {
+         "Title": "Bill to Address",
+         "WrntyFieldName": "Bill to Address",
+         "CustomField": false,
+         "ApiName": "BillToAddress",
+         "FieldType": 14,
+         "ColumnWidth": 1,
+         "Layout": {
+            "X": 0,
+            "Y": 7,
+            "Width": 1,
+            "Line_Number": 7
+         },
+         "value": {
+            "BillToStreet": "3355 South Las Vegas Boulevard",
+            "BillToCity": "Las Vegas",
+            "BillToZipCode": "89109",
+            "BillToState": "",
+            "BillToCountry": ""
+         }
+      },
+      {
+         "Title": "Ship to Address",
+         "WrntyFieldName": "Ship to Address",
+         "CustomField": false,
+         "ApiName": "ShipToAddress",
+         "FieldType": 14,
+         "ColumnWidth": 1,
+         "Layout": {
+            "X": 1,
+            "Y": 7,
+            "Width": 1,
+            "Line_Number": 7
+         },
+         "value": {
+            "ShipToStreet": "3355 South Las Vegas Boulevard",
+            "ShipToCity": "Las Vegas",
+            "ShipToZipCode": "89109",
+            "ShipToState": "",
+            "ShipToCountry": ""
+         }
+      },
+      {
+         "Title": "Bill to Phone",
+         "WrntyFieldName": "Bill to Phone",
+         "CustomField": false,
+         "ApiName": "BillToPhone",
+         "FieldType": 1,
+         "ColumnWidth": 1,
+         "Layout": {
+            "X": 0,
+            "Y": 8,
+            "Width": 1,
+            "Line_Number": 8
+         },
+         "value": "702-555-5555"
+      },
+      {
+         "Title": "Ship to Phone",
+         "WrntyFieldName": "Ship to Phone",
+         "CustomField": false,
+         "ApiName": "ShipToPhone",
+         "FieldType": 1,
+         "ColumnWidth": 1,
+         "Layout": {
+            "X": 1,
+            "Y": 8,
+            "Width": 1,
+            "Line_Number": 8
+         },
+         "value": "702-555-5555"
+      },
+      {
+         "Title": "Order Information",
+         "WrntyFieldName": "",
+         "CustomField": false,
+         "ApiName": "OrderInformation",
+         "FieldType": 13,
+         "ColumnWidth": 2,
+         "Layout": {
+            "X": 0,
+            "Y": 9,
+            "Width": 2,
+            "Line_Number": 9
+         },
+         "value": "splitter"
+      }
+   ],
+   "cart": [
+      {
+         "Title": "Image",
+         "WrntyFieldName": "Image",
+         "CustomField": false,
+         "ApiName": "Image",
+         "FieldType": 20,
+         "ColumnWidth": 10,
+         "Layout": {
+            "X": 0,
+            "Y": 0,
+            "Width": 1,
+            "Line_Number": 0
+         },
+         "values": [
+            {
+               "value": "https://s3-us-west-2.amazonaws.com/pepperi-storage-production/WrntyImages/3704323/PortfolioItems/1/14818871_1_200x200.jpg",
+               "InternalID": 458483007
+            },
+            {
+               "value": "https://s3-us-west-2.amazonaws.com/pepperi-storage-production/WrntyImages/3704323/PortfolioItems/9/14818849_1_200x200.jpg",
+               "InternalID": 458483008
+            },
+            {
+               "value": "https://s3-us-west-2.amazonaws.com/pepperi-storage-production/WrntyImages/3704323/PortfolioItems/0/14818850_1_200x200.jpg",
+               "InternalID": 458483009
+            },
+            {
+               "value": "https://s3-us-west-2.amazonaws.com/pepperi-storage-production/WrntyImages/3704323/PortfolioItems/1/14818851_1_200x200.jpg",
+               "InternalID": 458483010
+            },
+            {
+               "value": "https://s3-us-west-2.amazonaws.com/pepperi-storage-production/WrntyImages/3704323/PortfolioItems/2/14818852_1_200x200.jpg",
+               "InternalID": 458483011
+            },
+            {
+               "value": "https://s3-us-west-2.amazonaws.com/pepperi-storage-production/WrntyImages/3704323/PortfolioItems/3/14818853_1_200x200.jpg",
+               "InternalID": 458483012
+            }
+         ]
+      },
+      {
+         "Title": "Item Main Category Code",
+         "WrntyFieldName": "Item Main Category Code",
+         "CustomField": false,
+         "ApiName": "ItemMainCategoryCode",
+         "FieldType": 1,
+         "ColumnWidth": 10,
+         "Layout": {
+            "X": 0,
+            "Y": 0,
+            "Width": 1,
+            "Line_Number": 0
+         },
+         "values": [
+            {
+               "value": "MCR00103BLA42",
+               "InternalID": 458483007
+            },
+            {
+               "value": "MCR00102BLA38",
+               "InternalID": 458483008
+            },
+            {
+               "value": "MCR00102BLA40",
+               "InternalID": 458483009
+            },
+            {
+               "value": "MCR00102BLA42",
+               "InternalID": 458483010
+            },
+            {
+               "value": "MCR00102BLA44",
+               "InternalID": 458483011
+            },
+            {
+               "value": "MCR00102BLA46",
+               "InternalID": 458483012
+            }
+         ]
+      },
+      {
+         "Title": "Item Main Category",
+         "WrntyFieldName": "Item Main Category",
+         "CustomField": false,
+         "ApiName": "ItemMainCategory",
+         "FieldType": 1,
+         "ColumnWidth": 10,
+         "Layout": {
+            "X": 0,
+            "Y": 0,
+            "Width": 1,
+            "Line_Number": 0
+         },
+         "values": [
+            {
+               "value": "NewWave",
+               "InternalID": 458483007
+            },
+            {
+               "value": "NewWave",
+               "InternalID": 458483008
+            },
+            {
+               "value": "NewWave",
+               "InternalID": 458483009
+            },
+            {
+               "value": "NewWave",
+               "InternalID": 458483010
+            },
+            {
+               "value": "NewWave",
+               "InternalID": 458483011
+            },
+            {
+               "value": "NewWave",
+               "InternalID": 458483012
+            }
+         ]
+      },
+      {
+         "Title": "Item Description",
+         "WrntyFieldName": "Item Description",
+         "CustomField": false,
+         "ApiName": "ItemName",
+         "FieldType": 1,
+         "ColumnWidth": 10,
+         "Layout": {
+            "X": 0,
+            "Y": 0,
+            "Width": 1,
+            "Line_Number": 0
+         },
+         "values": [
+            {
+               "value": "Dress",
+               "InternalID": 458483007
+            },
+            {
+               "value": "Suit",
+               "InternalID": 458483008
+            },
+            {
+               "value": "Suit",
+               "InternalID": 458483009
+            },
+            {
+               "value": "Suit",
+               "InternalID": 458483010
+            },
+            {
+               "value": "Suit",
+               "InternalID": 458483011
+            },
+            {
+               "value": "Suit",
+               "InternalID": 458483012
+            }
+         ]
+      },
+      {
+         "Title": "Item Price",
+         "WrntyFieldName": "Item Price",
+         "CustomField": false,
+         "ApiName": "ItemPrice",
+         "FieldType": 8,
+         "ColumnWidth": 10,
+         "Layout": {
+            "X": 0,
+            "Y": 0,
+            "Width": 1,
+            "Line_Number": 0
+         },
+         "values": [
+            {
+               "value": 65,
+               "InternalID": 458483007
+            },
+            {
+               "value": 234,
+               "InternalID": 458483008
+            },
+            {
+               "value": 234,
+               "InternalID": 458483009
+            },
+            {
+               "value": 234,
+               "InternalID": 458483010
+            },
+            {
+               "value": 234,
+               "InternalID": 458483011
+            },
+            {
+               "value": 234,
+               "InternalID": 458483012
+            }
+         ]
+      },
+      {
+         "Title": "Unit Quantity",
+         "WrntyFieldName": "Unit Quantity",
+         "CustomField": false,
+         "ApiName": "UnitsQuantity",
+         "FieldType": 7,
+         "ColumnWidth": 10,
+         "Layout": {
+            "X": 0,
+            "Y": 0,
+            "Width": 1,
+            "Line_Number": 0
+         },
+         "values": [
+            {
+               "value": 1,
+               "InternalID": 458483007
+            },
+            {
+               "value": 1,
+               "InternalID": 458483008
+            },
+            {
+               "value": 1,
+               "InternalID": 458483009
+            },
+            {
+               "value": 1,
+               "InternalID": 458483010
+            },
+            {
+               "value": 1,
+               "InternalID": 458483011
+            },
+            {
+               "value": 1,
+               "InternalID": 458483012
+            }
+         ]
+      },
+      {
+         "Title": "Unit Price After Discount",
+         "WrntyFieldName": "Unit Price After Discount",
+         "CustomField": false,
+         "ApiName": "UnitPriceAfterDiscount",
+         "FieldType": 8,
+         "ColumnWidth": 10,
+         "Layout": {
+            "X": 0,
+            "Y": 0,
+            "Width": 1,
+            "Line_Number": 0
+         },
+         "values": [
+            {
+               "value": 65,
+               "InternalID": 458483007
+            },
+            {
+               "value": 234,
+               "InternalID": 458483008
+            },
+            {
+               "value": 234,
+               "InternalID": 458483009
+            },
+            {
+               "value": 234,
+               "InternalID": 458483010
+            },
+            {
+               "value": 234,
+               "InternalID": 458483011
+            },
+            {
+               "value": 234,
+               "InternalID": 458483012
+            }
+         ]
+      },
+      {
+         "Title": "Total Unit Price After Discount",
+         "WrntyFieldName": "Total Unit Price After Discount",
+         "CustomField": false,
+         "ApiName": "TotalUnitsPriceAfterDiscount",
+         "FieldType": 8,
+         "ColumnWidth": 10,
+         "Layout": {
+            "X": 0,
+            "Y": 0,
+            "Width": 1,
+            "Line_Number": 0
+         },
+         "values": [
+            {
+               "value": 65,
+               "InternalID": 458483007
+            },
+            {
+               "value": 234,
+               "InternalID": 458483008
+            },
+            {
+               "value": 234,
+               "InternalID": 458483009
+            },
+            {
+               "value": 234,
+               "InternalID": 458483010
+            },
+            {
+               "value": 234,
+               "InternalID": 458483011
+            },
+            {
+               "value": 234,
+               "InternalID": 458483012
+            }
+         ]
+      }
+   ],
+   "footer": [
+      {
+         "Title": "Totals Box",
+         "WrntyFieldName": "Totals Box",
+         "CustomField": false,
+         "ApiName": "TotalsBox",
+         "FieldType": 23,
+         "ColumnWidth": 10,
+         "Layout": {
+            "X": 0,
+            "Y": 0,
+            "Width": 1,
+            "Line_Number": 0
+         },
+         "value": {
+            "SubTotal": 1235,
+            "DiscountPercentage": 3,
+            "GrandTotal": 1197.95
+         }
+      },
+      {
+         "Title": "Signature",
+         "WrntyFieldName": "Signature",
+         "CustomField": false,
+         "ApiName": "Signature",
+         "FieldType": 25,
+         "ColumnWidth": 10,
+         "Layout": {
+            "X": 1,
+            "Y": 0,
+            "Width": 1,
+            "Line_Number": 0
+         },
+         "value": "Signature"
+      }
+   ],
+   "fieldsNotFound": []
+}
