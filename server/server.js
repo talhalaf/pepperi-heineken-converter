@@ -6,6 +6,8 @@ const _ = require('lodash');
 const hbs = require('hbs');
 // const bodyParser = require('body-parser');
 
+// Added heroku buildpacks:set https://github.com/jontewks/puppeteer-heroku-buildpack
+
 const {getPDFObject} = require('./utils/getactivitydata.js');
 var {authenticate} = require('./middleware/authenticate');
 
