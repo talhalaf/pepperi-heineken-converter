@@ -115,6 +115,4 @@ let getPDFObject = async (activityId,token) =>  {
     PDFObject.newPDFFilePath = newPDFFilePath;
     return PDFObject;    
 }
-
-getPDFObject(50587028,'VG9rZW5BdXRoOjg0Yjk0ZWNiLTYxZjktNDI5NS04YzY2LWJmYzMzMzZmOGVjNQ==');
 module.exports.getPDFObject = getPDFObject;
