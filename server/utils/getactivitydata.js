@@ -55,26 +55,44 @@ let getPDFData = async (activityId,token) =>{
     let PDFObject = {};
     let activityData = await getActivityData(activityId,token);
     let accountRef = activityData.Account.Data;
-    PDFObject.TSAFormLogic = activityData.TSAFormLogic;
-
-    let questionsMeta = PDFObject.TSAFormLogic.split(',');    
-    //trimming (removing spaces) all strings
-    questionsMeta = questionsMeta.map(questionString => 
-        questionString.trim().split(':').map(fieldName=> fieldName.trim()));
-    // PDFObject.questionsMeta=questionsMeta;
+    PDFObject.TSAPDFQuestions = activityData.TSAPDFQuestions;
+    PDFObject.questionsGroupsMeta = PDFObject.TSAPDFQuestions.trim().split('|');
+    PDFObject.questionsGroupsMeta = PDFObject.questionsGroupsMeta.map(group => {
+        return group.trim().split(',');
+    });
     PDFObject.questions = [];
-    let i = 0;
-    for (let question of questionsMeta){
-        PDFObject.questions[i] = { 
-            question: activityData['TSA'+question[0]],
-            expectedValue: question[1],
-            answer: activityData['TSA'+question[0]+'Answer'],
-            points: question[2],
-            picture1: activityData['TSA'+question[3]],
-            picture2: activityData['TSA'+question[4]]
+    for (let i = 0 ; i < PDFObject.questionsGroupsMeta.length ; i++){
+        for (let j = 0 ; j < PDFObject.questionsGroupsMeta[i].length ; j++){
+            question = PDFObject.questionsGroupsMeta[i][j].trim().split(':');
+            position = (i * PDFObject.questionsGroupsMeta[i].length)+j
+            console.log(question , position);
+            PDFObject.questions[position] = {
+                question: activityData['TSA'+question[0]],
+                answer: activityData['TSA'+question[0]+'Answer'],
+                grade: activityData['TSA'+question[1]],
+                picture1: activityData['TSA'+question[2]],
+                picture2: activityData['TSA'+question[3]]
+            }
         }
-        i++;
     }
+
+    //trimming (removing spaces) all strings
+    // questionsMeta = questionsMeta.map(questionString => 
+    //     questionString.trim().split(':').map(fieldName=> fieldName.trim()));
+    // // PDFObject.questionsMeta=questionsMeta;
+    // 
+    // let i = 0;
+    // for (let question of questionsMeta){
+    //     PDFObject.questions[i] = { 
+    //         question: activityData['TSA'+question[0]],
+    //         expectedValue: question[1],
+    //         answer: activityData['TSA'+question[0]+'Answer'],
+    //         points: question[2],
+    //         picture1: activityData['TSA'+question[3]],
+    //         picture2: activityData['TSA'+question[4]]
+    //     }
+    //     i++;
+    // }
     PDFObject.ActivityID = activityData.InternalID;
     PDFObject.AccountName = accountRef.Name;
     PDFObject.AccountID = accountRef.ExternalID;

@@ -183,7 +183,7 @@
 
 {
 	let createQuestion = (question,index) => {
-		let rightAnswer = question.expectedValue === question.answer;
+		let rightAnswer = !(question.grade < 0);
 		return `<div class="question">
 
 			<div class="questionText">
@@ -195,7 +195,7 @@
 			<div class="questionAnswer">
 
 				<div class="questionPoints ${ rightAnswer ? '' : 'wrongPoints' }">
-					<strong>${rightAnswer?'+':'-'}${question.points}</strong>
+					<strong>${rightAnswer?'+':''}${question.grade}</strong>
 				</div>
 				
 				<div class="questionAnswerValue  ${ rightAnswer ?'':'wrongValue'}">
@@ -216,9 +216,7 @@
 	//!----------------------!-MAIN-!--------------------!//
 	///calculating points
 		let points = PDFObject.questions.map(question =>{
-			return question.expectedValue === question.answer ?
-			parseInt(question.points) :
-			0;
+			return parseInt(question.grade) >= 0 ? parseInt(question.grade) : 0;
 		}).reduce((a,b) => a + b,0);
 
 		///creating questions HTML Element

@@ -2,7 +2,6 @@ const path = require('path');
 const fs = require('fs');
 const http = require('http');
 const express = require('express');
-const _ = require('lodash');
 const hbs = require('hbs');
 // const bodyParser = require('body-parser');
 
