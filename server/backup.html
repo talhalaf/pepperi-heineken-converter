@@ -179,6 +179,9 @@
 </div>
 <div class="line-splitter">
 </div>
+<div id="signature-box" style="width:100%;float:left;text-align: center;margin-top:2%">
+
+</div>
 <script>
 
 {
@@ -215,7 +218,7 @@
 
 	//!----------------------!-MAIN-!--------------------!//
 	///calculating points
-		let points = PDFObject.questions.map(question =>{
+	let points = PDFObject.questions.map(question =>{
 			return parseInt(question.grade) >= 0 ? parseInt(question.grade) : 0;
 		}).reduce((a,b) => a + b,0);
 
@@ -236,6 +239,7 @@
 		document.getElementById('ActionDateTime').innerHTML=PDFObject.ActionDateTime;
 		document.getElementById('AgentName').innerHTML=PDFObject.AgentName;
 		document.getElementById('points').innerHTML=points;
+		document.getElementById('signature-box').innerHTML=	`<strong>Signature:</strong> <img src="${PDFObject.TSAAgentSign}" height="250">`;
 	//!----------------------!-END-MAIN-!--------------------!//
 }
 

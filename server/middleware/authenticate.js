@@ -24,11 +24,11 @@ let getToken = (auth) =>{
 }
 
 let authenticate = (req, res, next) => {
-  console.log("authenticating...");
+
 
   //extract auth from URL
   let auth = req.query.auth;
-
+  console.log("authenticating...",auth);
   getToken(auth).then(res=>{
     console.log("resolving auth result");
     if (!res || res.CompanyID === 0){

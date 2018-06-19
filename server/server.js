@@ -7,7 +7,7 @@ const hbs = require('hbs');
 
 // Added heroku buildpacks:set https://github.com/jontewks/puppeteer-heroku-buildpack
 
-const {getPDFObject} = require('./utils/getactivitydata.js');
+const {getPDFObject,getHTMLObject} = require('./utils/getactivitydata.js');
 var {authenticate} = require('./middleware/authenticate');
 
 var app = express();
@@ -24,12 +24,27 @@ app.get('/PDF/:ActivityID',authenticate,(request,response) => {
         result = res;
         setTimeout(() => {
             response.sendFile(result.newPDFFilePath); 
-        },5000);
+        },12000);
     }).catch(e=>{
         console.log("error creating PDF:",e,"Sending 404.html");
         response.sendFile(publicPath+'/404.html');
     });
 })
+// app.get('/HTML/:ActivityID',authenticate,(request,response) => {
+//     let ActivityID = request.params.ActivityID;
+//     let result;
+//     getHTMLObject(ActivityID,request.token).then((res)=>{
+//         console.log("HI");
+//         result = res;
+//         console.log(result.newHTMLFilePath);
+//         return response.sendFile(result.newHTMLFilePath);
+
+//     }).catch(e=>{
+//         console.log("error creating PDF:",e,"Sending 404.html");
+//         console.log("sending file...");
+//         response.sendFile(publicPath+'/404.html');
+//     });
+// })
 //48659549
 app.listen(port,() => {
     console.log(`Server is up on port ${port}`);
