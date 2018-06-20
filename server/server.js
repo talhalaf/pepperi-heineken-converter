@@ -24,7 +24,7 @@ app.get('/PDF/:ActivityID',authenticate,(request,response) => {
         result = res;
         setTimeout(() => {
             response.sendFile(result.newPDFFilePath); 
-        },12000);
+        },9000);
     }).catch(e=>{
         console.log("error creating PDF:",e,"Sending 404.html");
         response.sendFile(publicPath+'/404.html');

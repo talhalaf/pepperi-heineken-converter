@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <html>
 
 <head>
@@ -21,21 +19,26 @@
 		width:100%;
 	}
 	.accountLogo{
-		position: relative;
-		top:1%;
-		right:1%;
+		top: 1%;
+		right: 1%;
 		float: right;
+		width: 20%;
 	}
 	.companyLogo{
-		position: relative;
 		top:1%;
 		left:1%;
 		float: left;
 	}
 	.title{
-		margin: 0px auto;
-		font-size: 1.5em;
-		color: rgb(80,173,125);
+    margin: 0px auto;
+    font-size: 1.5em;
+    color: rgb(80,173,125);
+    width: 43%;
+    display: block;
+    word-wrap: break-word;
+    float: left;
+    position: relative;
+    left: 12%;
 	}
 	.accountImage{
 		height:100px;
@@ -136,6 +139,22 @@
 		height:200px; 
 		margin:3%;
 	}
+	.signature{
+		margin-top:4%;
+		margin-bottom: 4%;
+		margin: 0px auto;
+		border-radius: 25px;
+		border:solid 3px;
+		border-color: darkgreen;
+		width:50%;
+		background-color:rgb(236,240,241); 
+	}
+	.agentSignature{
+		width:200px;
+		height:200px; 
+		object-fit: contain;
+		margin:3%;
+	}
 	</style>
 </head>
 
@@ -150,11 +169,11 @@
 		
 		</div> 
 		
-		<span class="title">
+		<div class="title">
 			<strong>
 				Resultado Evaluacion <span id="AccountName"> {AccountName} </span>
 			</strong>
-		</span> 
+		</div> 
 		
 		<div class="accountLogo">
 			
@@ -181,6 +200,8 @@
 </div>
 <div id="signature-box" style="width:100%;float:left;text-align: center;margin-top:2%">
 
+</div>
+<div class="line-splitter">
 </div>
 <script>
 
@@ -239,7 +260,17 @@
 		document.getElementById('ActionDateTime').innerHTML=PDFObject.ActionDateTime;
 		document.getElementById('AgentName').innerHTML=PDFObject.AgentName;
 		document.getElementById('points').innerHTML=points;
-		document.getElementById('signature-box').innerHTML=	`<strong>Signature:</strong> <img src="${PDFObject.TSAAgentSign}" height="250">`;
+		//!----------------------!-Signature-!--------------------!//
+		if (PDFObject.TSAAgentSign){
+			document.getElementById('signature-box').innerHTML=	
+			`<div class="signature"> 
+				<ul style="display: flex;list-style-type: none;padding-right: 20px;">
+				<li style="margin: auto 0px;"><strong style="color:rgba(25,35,45,0.7)">Signature:</strong></li>
+				<li style="margin: auto 0px;"><img src="${PDFObject.TSAAgentSign}" class="agentSignature"> </li>
+				</ul
+			</div>`;
+		}
+			//!----------------------!-END-MAIN-!--------------------!//
 	//!----------------------!-END-MAIN-!--------------------!//
 }
 
