@@ -99,7 +99,7 @@ let getPDFData = async (activityId,token) =>{
     PDFObject.Address = accountRef.Street + ', ' + accountRef.City + ', ' + accountRef.Country;
     PDFObject.ActionDateTime = activityData.ActionDateTime;
     PDFObject.AgentName = activityData.Agent.Data.FirstName +' '+ activityData.Agent.Data.LastName;
-    PDFObject.TSAAgentSign = activityData.TSAAgentSign.URL;
+    PDFObject.TSAAgentSign = activityData.TSAAgentSign ? activityData.TSAAgentSign.URL : '';
     // PDFObject.questions = [];
     // for(let i=1;i<=11;i++){
     //     PDFObject.questions.push({
