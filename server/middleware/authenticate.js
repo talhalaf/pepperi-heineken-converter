@@ -24,24 +24,27 @@ let getToken = (auth) =>{
 }
 
 let authenticate = (req, res, next) => {
-
-
-  //extract auth from URL
-  let auth = req.query.auth;
-  console.log("authenticating...",auth);
-  getToken(auth).then(res=>{
-    console.log("resolving auth result");
-    if (!res || res.CompanyID === 0){
-      return Promise.reject("no result or no company ID - authentication error");
-    }
-    req.token = Buffer.from('TokenAuth:'+res.APIToken).toString('base64');
-    // console.log(req.token);
-    console.log("authentication success");
+  if (!req.query.token){
+    //extract auth from URL
+    let auth = req.query.auth;
+    console.log("authenticating...",auth);
+    getToken(auth).then(res=>{
+      console.log("resolving auth result");
+      if (!res || res.CompanyID === 0){
+        return Promise.reject("no result or no company ID - authentication error");
+      }
+      req.token = Buffer.from('TokenAuth:'+res.APIToken).toString('base64');
+      // console.log(req.token);
+      console.log("authentication success");
+      next();
+    }).catch(e=>{
+      console.log(e, 'Sending 401.html');
+      res.status(401).sendFile(publicPath+'/401.html');
+    })
+  }
+  else{
     next();
-  }).catch(e=>{
-    console.log(e, 'Sending 401.html');
-    res.status(401).sendFile(publicPath+'/401.html');
-  })
+  }
 };
 
 module.exports = {authenticate};
