@@ -16,86 +16,50 @@ app.use(express.static(publicPath));
 
 app.get('/PDF/:ActivityID',authenticate,(request,response) => {
     let ActivityID = request.params.ActivityID;
-    let auth = request.query.auth;
-    let numOfTries = request.query.numOfTries ? parseInt(request.query.numOfTries) : 1;
-    let token = request.token || request.query.token;
-    let urlPath = url.format({
-        pathname: '/PDF/'+ActivityID,
-        query:{
-            "auth": auth,
-            "numOfTries": numOfTries+1,
-            "token": token
-        }
-     });
-    if (numOfTries > 1){
-        token = request.query.token;
-        let PDFFileLocation = getPDFFileLocation(ActivityID);
-        setTimeout(()=>{ 
-            fs.stat(PDFFileLocation,(err,stats) => {
-                if (!stats){
-                    console.log('--------------------------------');
-                    console.log('Could not locate the file on the '+parseInt(numOfTries) +' try yet...')
-                    console.log('--------------------------------');
-                    console.log('Waited 1 second, response redirect to '+urlPath);
-                    response.redirect(url.format({
-                        pathname: '/PDF/'+ActivityID,
-                        query:{
-                            "auth": auth,
-                            "numOfTries": numOfTries+1,
-                            "token": token
-                        }
-                     }));
-                }
-                else if (!err) {
-                    console.log('--------------------------------');
-                    console.log('Success! PDF was created on the machine and sent to the client!')
-                    console.log('--------------------------------');
-                    fileLocated = true;
-                    response.sendFile(PDFFileLocation);
-                } else{
-                    console.log(err);
-                }
-            });
-        },1000);
-    }
-    else{
-        setTimeout(()=>{ 
-        getPDFObject(ActivityID,request.token).then((res)=>{
+    setTimeout(()=>{ 
+        getPDFObject(ActivityID,request.token)
+        .then((res)=>{
             console.log('All data for PDF was generated succesfully!');
-            // response.sendFile(path.join(__dirname,'..',path.win32.basename(`template${ActivityID}.html`)));
-            result = res;
-            fs.stat(result.newPDFFilePath,(err,stats)=>{
+            sendPDFFile(response,res.newPDFFilePath,1000);
+        })
+        .catch(e=>{
+            console.log("error creating PDF:",e,"Sending 404.html");
+            response.sendFile(publicPath+'/404.html');
+        });},1000);
+    });
+
+
+let sendPDFFile = (response,newPDFFilePath,timeToWait,numberOfTries) => {
+    numberOfTries = numberOfTries || 1;
+    console.log('Waiting '+timeToWait/1000+' second(s)...');
+    if (timeToWait/1000 > 10){
+        throw new Error('File Not Found!');
+    }
+    else {
+        setTimeout(()=>{
+            fs.stat(newPDFFilePath,(err,stats)=>{
+
                 //File is not ready yet, redirecting to the same URL.
                 if (!stats){
                     console.log('--------------------------------');
                     console.log('Could not locate the file on the Machine yet...')
                     console.log('--------------------------------');
-                    console.log('Waited 1 second, response redirect to '+urlPath);
-                    response.redirect(url.format({
-                        pathname: '/PDF/'+ActivityID,
-                        query:{
-                            "auth": auth,
-                            "numOfTries": numOfTries+1,
-                            "token": token
-                        }
-                     }));
+                    timeToWait = numberOfTries%2 == 0 ? timeToWait*1.5 : timeToWait;
+                    sendPDFFile(response,newPDFFilePath,timeToWait,numberOfTries+1);
                 }
                 else if (!err){
                     console.log('--------------------------------');
                     console.log('Success! PDF was created on the machine...')
                     console.log('--------------------------------');
                     fileLocated = true;
-                    response.sendFile(result.newPDFFilePath);
+                    response.sendFile(newPDFFilePath);
                 } else {
                     console.log(error);
                 }
             });
-        }).catch(e=>{
-            console.log("error creating PDF:",e,"Sending 404.html");
-            response.sendFile(publicPath+'/404.html');
-        });},1000);
+        },timeToWait);
     }
-});
+}
 
 
 app.listen(port,() => {
