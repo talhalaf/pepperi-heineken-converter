@@ -2,4 +2,10 @@ node_modules/
 lines.json/
 screenshot.png/
 transactionData.json/
-server/new-files
+
+
+# exclude everything
+server/new-files/*
+
+# exception to the rule
+server/new-files/.gitkeep 
